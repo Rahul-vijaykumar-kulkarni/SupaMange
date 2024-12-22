@@ -142,7 +142,7 @@ const Canvas = () => {
     
     <div className="min-h-screen bg-gray-100 p-8">
       <header className="bg-white shadow p-4 flex justify-between items-center flex-wrap">
-        <h1 className="text-xl font-bold flex-1">User Management</h1>
+        <h1 className="text-xl font-bold flex-1">Student Management</h1>
 
         {/* Button to toggle the Add User Form */}
         <button
@@ -183,24 +183,28 @@ const Canvas = () => {
               }
               className="border p-2 rounded"
             />
-            <input
-              type="date"
-              placeholder="Date Joined"
-              value={newUser.dateJoined}
-              onChange={(e) =>
-                setNewUser({ ...newUser, dateJoined: e.target.value })
-              }
-              className="border p-2 rounded"
-            />
-            <input
-              type="datetime-local"
-              placeholder="Last Login"
-              value={newUser.lastLogin}
-              onChange={(e) =>
-                setNewUser({ ...newUser, lastLogin: e.target.value })
-              }
-              className="border p-2 rounded"
-            />
+            <div>
+  <label htmlFor="dateJoined" className="block text-sm font-medium text-gray-700">Date Joined</label>
+  <input
+    type="date"
+    id="dateJoined"
+    value={newUser.dateJoined}
+    onChange={(e) => setNewUser({ ...newUser, dateJoined: e.target.value })}
+    className="border p-2 rounded mt-1"
+  />
+</div>
+
+<div>
+  <label htmlFor="lastLogin" className="block text-sm font-medium text-gray-700">Last Login</label>
+  <input
+    type="datetime-local"
+    id="lastLogin"
+    value={newUser.lastLogin}
+    onChange={(e) => setNewUser({ ...newUser, lastLogin: e.target.value })}
+    className="border p-2 rounded mt-1"
+  />
+</div>
+
             <select
               value={newUser.status}
               onChange={(e) =>
