@@ -4,6 +4,11 @@
 You can view the live deployed version of the project at:  
 [**SUPAMANAGE**](https://supamanage.netlify.app/)
 
+## Landing Page Image
+Here’s a preview of the landing page:
+
+![Landing Page](public/supabase.png)
+
 ## Features:
 - **User CRUD Operations**: Add, Edit, Update, and Delete users.
 - **Filtering**: Filter users by active status and cohort.
